@@ -45,3 +45,31 @@
 14. И ещё раз посмотреть выводы команд git status, git diff и git diff --staged.
 
 ![Git status after commit](/img/git_status_after_commit.png)
+
+### Создание файлов .gitignore и второго коммита
+
+1. Создайте файл .gitignore (обратите внимание на точку в начале файла), проверьте его статус сразу после создания.
+![.gitignore create](/img/gitignore_create.png)
+
+2. Добавьте файл .gitignore в следующий коммит (git add...).
+```
+git add .gitignore
+```
+3. На одном из следующих блоков вы будете изучать Terraform, давайте сразу создадим соотвествующий каталог terraform и внутри этого каталога — файл .gitignore по примеру: https://github.com/github/gitignore/blob/master/Terraform.gitignore.
+![.gitignore terraform](/img/gitignore_terraform.png)
+
+4. В файле README.md опишите своими словами, какие файлы будут проигнорированы в будущем благодаря добавленному .gitignore.
+
+`- Содержимое директории .terraform`
+
+`- Файлы содержащие в названии ".tfstate"`
+
+`- Файлы crash.log и начинающиеся на "crash" с расширением .log `
+
+`- Файлы с расширением .tfvars и .tfvars.json`
+
+`- Файлы override.tf, override.tf.json, а также другие файлы, заканчивающиеся на _override.tf и _override.tf.json`
+
+`- Файлы .terraformrc и terraform.rc`
+
+5. Закоммитьте все новые и изменённые файлы. Комментарий к коммиту должен быть Added gitignore.
