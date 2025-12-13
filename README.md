@@ -25,3 +25,23 @@
 ![git status - 1](/img/git_status_1.png)
 
 8. Отредактируйте файл README.md любым удобным способом, тем самым переведя файл в состояние Modified.
+
+9. Ещё раз выполните git status и продолжайте проверять вывод этой команды после каждого следующего шага.
+![git status - 2](/img/git_status_2.png)
+
+10. Теперь посмотрите изменения в файле README.md, выполнив команды git diff и git diff --staged.
+![git diff](/img/git_diff.png)
+![git diff --staged](/img/git_diff_staged.png)
+
+11. Переведите файл в состояние staged (или, как говорят, просто добавьте файл в коммит) командой git add README.md.
+
+12. И ещё раз выполните команды git diff и git diff --staged. Поиграйте с изменениями и этими командами, чтобы чётко понять, что и когда они отображают.
+![git diff --stage - 2](/img/git_diff_stage_2.png)
+![git diff - 2](/img/git_diff_2.png)
+
+13. Теперь можно сделать коммит git commit -m 'First commit'.
+![commit - 1](/img/first_commit.png)
+
+14. И ещё раз посмотреть выводы команд git status, git diff и git diff --staged.
+
+![Git status after commit](/img/git_status_after_commit.png)
