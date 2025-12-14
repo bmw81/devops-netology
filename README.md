@@ -73,3 +73,4 @@ git add .gitignore
 `- Файлы .terraformrc и terraform.rc`
 
 5. Закоммитьте все новые и изменённые файлы. Комментарий к коммиту должен быть Added gitignore.
+![Commit - 2](/img/git_commit_2.png)
