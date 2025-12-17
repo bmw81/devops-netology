@@ -76,4 +76,4 @@
 `VSCode`
 ![VSCode Git extension](/img/vscode_git_extension.png)
 
-
+[Ссылка на репозиторий Gitlab](https://gitlab.com/bmw1481/devops-netology)
