@@ -168,4 +168,37 @@ Merge branch 'git-merge'
 Все строчки, начинающиеся на #, будут проигнорированны.
 
 После сохранения изменения Git сообщит:
-git 
+![Success rebase](/img/success_rebase.png)
+
+**Шаг 7.** И попробуем выполнить git push либо git push -u origin git-rebase, чтобы точно указать, что и куда мы хотим запушить.
+
+Эта команда завершится с ошибкой
+
+Это произошло, потому что мы пытаемся перезаписать историю.
+
+**Шаг 8.** Чтобы Git позволил нам это сделать, добавим флаг force
+```
+git push -u origin git-rebase -f
+Enumerating objects: 10, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 443 bytes | 443.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:andrey-borue/devops-netology.git
+ + 1829df1...e3b942b git-rebase -> git-rebase (forced update)
+Branch 'git-rebase' set up to track remote branch 'git-rebase' from 'origin'.
+```
+**Шаг 9.** Теперь можно смержить ветку git-rebase в main без конфликтов и без дополнительного мерж-комита простой перемоткой:
+```
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+$ git merge git-rebase
+Updating 6158b76..45893d1
+Fast-forward
+ branching/rebase.sh | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+```
