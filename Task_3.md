@@ -202,3 +202,5 @@ Fast-forward
  branching/rebase.sh | 3 +--
  1 file changed, 1 insertion(+), 2 deletions(-)
 ```
+`Итоговый Network graph`
+![Network graph](/img/network_graph-2.png)
